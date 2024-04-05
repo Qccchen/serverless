@@ -10,7 +10,7 @@ async function sendVerificationEmail(pubSubEvent) {
     const userData = JSON.parse(messageBody);
     const { userId, email } = userData; 
     const verificationToken = uuidv4();
-    const verificationLink = `http://qccchen.me:8080/verify?verificationToken=${verificationToken}`;
+    const verificationLink = `https://qccchen.me/verify?verificationToken=${verificationToken}`;
 
     const msg = {
         to: email,
